@@ -10,14 +10,12 @@ function App() {
     <div className="w-fulloverflow-x-clip min-h-screen text-blue-50 bg-slate-900 z-40">
       <Router>
         <Navbar />
-        <div className="py-20">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/club_info" element={<ClubInfo />} />
             <Route path="/meeting_dates" element={<MeetingDates />} />
             <Route path="/projects" element={<Projects />} />
           </Routes>
-        </div>
       </Router>
     </div>
   );
