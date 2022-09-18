@@ -1,15 +1,8 @@
 import React from "react";
-import SpinningScene from "../Components/SpinningScene";
-import SpinningGeometry from "../Components/SpinningGeometry";
 
 function ClubInfo() {
   return (
     <div className="flex flex-col items-center">
-      <div className="fixed w-screen aspect-square">
-        <SpinningScene
-          object={<SpinningGeometry></SpinningGeometry>}
-        ></SpinningScene>
-      </div>
       <div className="z-10">
         <div className="flex flex-col place-content-center h-96">
           <h1 className="text-9xl">Club Info</h1>

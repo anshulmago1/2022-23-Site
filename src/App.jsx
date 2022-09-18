@@ -7,15 +7,15 @@ import Projects from "./Pages/Projects";
 
 function App() {
   return (
-    <div className="w-full min-h-screen text-blue-50 bg-slate-900 z-40">
+    <div className="w-full min-h-screen text-slate-50 bg-slate-900 z-40">
       <Router>
         <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/club_info" element={<ClubInfo />} />
-            <Route path="/meeting_dates" element={<MeetingDates />} />
-            <Route path="/projects" element={<Projects />} />
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/club_info" element={<ClubInfo />} />
+          <Route path="/meeting_dates" element={<MeetingDates />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
       </Router>
     </div>
   );
