@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="md:block flex justify-end fixed top-0 left-0 py-4 px-10 bg-slate-500 bg-opacity-25 backdrop-blur-md w-screen border-b border-b-slate-500 z-40">
-      <ul className="md:flex hidden gap-20">
-        <li>
-          <Link to="/" className="hover:font-bold">
-            Home
-          </Link>
-        </li>
+    <nav className="flex justify-between items-center fixed top-0 left-0 py-4 px-10 bg-slate-500 bg-opacity-25 backdrop-blur-md w-screen border-b border-b-slate-500 z-40">
+      <Link to="/" className="text-xl font-bold hover:font-extrabold">
+        CSNHS
+      </Link>
+      <ul className="md:flex hidden gap-10">
         <li>
           <Link to="/club_info" className="hover:font-bold">Club Information</Link>
         </li>

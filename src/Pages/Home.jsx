@@ -11,7 +11,7 @@ function Home() {
           object={<SpinningGeometry></SpinningGeometry>}
         ></SpinningScene>
       </div>
-      <div className="z-10">
+      <div className="z-10 w-full">
         <div className="flex flex-col place-content-center text-center h-screen">
           <h1 className="lg:text-9xl sm:text-8xl text-7xl">Clements</h1>
           <h1 className="lg:text-9xl sm:text-8xl text-7xl">CSNHS</h1>
