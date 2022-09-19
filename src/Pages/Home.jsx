@@ -2,6 +2,8 @@ import React from "react";
 import * as THREE from "three";
 import * as drei from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
+import Bloom from "../Components/Bloom";
+
 import {
   Environment,
   MeshDistortMaterial,
@@ -17,6 +19,7 @@ function Home() {
         <Canvas>
           <Environment preset={"city"}></Environment>
           <HomeScene rotation={[0, Math.PI, 0]}></HomeScene>
+          <fog attach="fog" args={["#475569", 5, 40]} />
         </Canvas>
       </div>
       <div className="z-10 w-full">
@@ -55,23 +58,16 @@ function HomeScene({ position, ...other }) {
       <PerspectiveCamera makeDefault position={[0, 4, 4]}></PerspectiveCamera>
       <group position={[2, 0, 0]}>
         <group rotation={[-0.4, 0, 0]}>
-          <drei.Float speed={8} rotationIntensity={0.5}>
-            <drei.Icosahedron position={[0, 0.5, 0]} rotation={[0.2, 0.2, 0.1]}>
-              <meshPhysicalMaterial></meshPhysicalMaterial>
-            </drei.Icosahedron>
-          </drei.Float>
+          {/* <Bloom> */}
+            {/* <ambientLight></ambientLight> */}
+            <drei.Float speed={8} rotationIntensity={0.5}>
+              <drei.Icosahedron args={[2, 0]} position={[1.2, 0.5, 0]} rotation={[0.2, 0.2, 0.1]}>
+                <meshPhysicalMaterial></meshPhysicalMaterial>
+              </drei.Icosahedron>
+            </drei.Float>
+          {/* </Bloom> */}
         </group>
-        <drei.Plane
-          rotation={[-Math.PI / 2, 0, 0]}
-          position={[0, -1, 0]}
-          args={[3, 3, 3, 3]}
-        >
-          <meshBasicMaterial
-            wireframe
-            color={[0.4, 0.4, 1]}
-            wireframeLinewidth={10}
-          ></meshBasicMaterial>
-        </drei.Plane>
+        <gridHelper args={[100, 60]} position={[10, -1.5, 0]} rotation={[0, Math.PI/6, 0]}></gridHelper>
       </group>
       <drei.Text
         position={[-2, 0.4, 0]}
