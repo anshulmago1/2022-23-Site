@@ -2,7 +2,6 @@ import React from "react";
 import * as THREE from "three";
 import * as drei from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import Bloom from "../Components/Bloom";
 
 import {
   Environment,
@@ -58,14 +57,11 @@ function HomeScene({ position, ...other }) {
       <PerspectiveCamera makeDefault position={[0, 4, 4]}></PerspectiveCamera>
       <group position={[2, 0, 0]}>
         <group rotation={[-0.4, 0, 0]}>
-          {/* <Bloom> */}
-            {/* <ambientLight></ambientLight> */}
             <drei.Float speed={8} rotationIntensity={0.5}>
               <drei.Icosahedron args={[2, 0]} position={[1.2, 0.5, 0]} rotation={[0.2, 0.2, 0.1]}>
                 <meshPhysicalMaterial></meshPhysicalMaterial>
               </drei.Icosahedron>
             </drei.Float>
-          {/* </Bloom> */}
         </group>
         <gridHelper args={[100, 60]} position={[10, -1.5, 0]} rotation={[0, Math.PI/6, 0]}></gridHelper>
       </group>
