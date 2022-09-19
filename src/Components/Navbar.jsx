@@ -17,14 +17,6 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link
-            to="/meeting_dates"
-            className="hover:text-blue-400 transition-all "
-          >
-            Meeting Dates
-          </Link>
-        </li>
-        <li>
           <Link to="/projects" className="hover:text-blue-400 transition-all ">
             Projects
           </Link>
