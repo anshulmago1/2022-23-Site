@@ -10,7 +10,7 @@ function Navbar() {
       >
         CSNHS
       </Link>
-      <ul className="md:flex hidden gap-10 ">
+      <ul className="flex sm:gap-10 gap-4">
         <li>
           <Link to="/club_info" className="hover:text-blue-400 transition-all ">
             Club Information
@@ -22,7 +22,6 @@ function Navbar() {
           </Link>
         </li>
       </ul>
-      <div className="md:hidden block">small menu</div>
     </nav>
   );
 }
