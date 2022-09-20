@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import * as drei from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
@@ -6,10 +6,11 @@ import {
   PerspectiveCamera,
 } from "@react-three/drei";
 import { Vector3 } from "three";
-import FacebookIcon from "../assets/facebook_icon.svg";
-import RemindIcon from "../assets/remind_icon.svg";
 
 function Home() {
+  const [pillar2Hover, setPillar2Hover] = useState(false);
+  const [pillar4Hover, setPillar4Hover] = useState(false);
+
   return (
     <body className="flex flex-col">
       <header className="h-screen w-full aspect-square">
@@ -22,16 +23,31 @@ function Home() {
 
       <section id="pillars" className="mb-40">
         <div className="h-96">
-          Scholarship
+          
         </div>
-        <div style={{clipPath: 'polygon(0 19%, 100% 0, 100% 100%, 0 60%)'}} className="bg-blue-500 h-screen">
-          Service
+
+        <div style={{
+          filter: pillar2Hover && 'drop-shadow(-5px 10px 4px #7DD3FC)',
+        }} className="transition-all duration-500">
+          <div style={{
+            clipPath: 'polygon(0 19%, 100% 0, 100% 100%, 0 60%)',
+          }} className={`bg-sky-600 h-screen ${pillar2Hover && 'hover:-translate-y-4 hover:translate-x-2'} transition-all duration-500`} onMouseOver={() => setPillar2Hover(true)} onMouseLeave={() => setPillar2Hover(false)}>
+            
+          </div>
         </div>
+
         <div className="h-96">
-          Leadership
+          
         </div>
-        <div style={{clipPath: 'polygon(0 11%, 100% 0, 100% 60%, 0 100%)'}} className="bg-blue-500 h-screen">
-          Character
+
+        <div style={{
+          filter: pillar4Hover && 'drop-shadow(5px 10px 4px #7DD3FC)',
+        }} className="transition-all duration-500">
+          <div style={{
+            clipPath: 'polygon(0 11%, 100% 0, 100% 60%, 0 100%)',
+          }} className={`bg-sky-600 h-screen ${pillar4Hover && 'hover:-translate-y-4 hover:-translate-x-2'} transition-all duration-500`} onMouseOver={() => setPillar4Hover(true)} onMouseLeave={() => setPillar4Hover(false)}>
+            
+          </div>
         </div>
       </section>
 
@@ -40,26 +56,6 @@ function Home() {
 
         </div>
       </section>
-
-      <footer className="p-6">
-        <div className="flex items-center mb-2">
-          <div className="mr-8">
-            <a href="#">Join Our Club</a>
-          </div>
-          <a href="https://www.facebook.com/groups/chscsnhs" className="flex items-center mr-8">
-            <img src={FacebookIcon} alt="Facebook" className="w-7 mr-2" />
-            <span>Clements CSNHS</span>
-          </a>
-          <a href="https://www.remind.com/join/chscsnhs" className="flex items-center">
-            <img src={RemindIcon} alt="Remind" className="w-9 mr-1" />
-            <span>@chscsnhs</span>
-          </a>
-        </div>
-        <div className="border-b border-white"></div>
-        <div className="mt-2">
-          Copyright &copy;2022 Clements Computer Science National Honor Society. All rights reserved.
-        </div>
-      </footer>
     </body>
   );
 }

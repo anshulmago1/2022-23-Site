@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
 import ClubInfo from "./Pages/ClubInfo";
 import Projects from "./Pages/Projects";
@@ -14,6 +15,7 @@ function App() {
           <Route path="/club_info" element={<ClubInfo />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
