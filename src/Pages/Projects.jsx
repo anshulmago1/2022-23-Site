@@ -26,18 +26,16 @@ function Project({ name, link, tags }) {
   );
 
   return (
-    <div>
-      <a href={link} target="_blank" className="bg-slate-800 rounded-3xl w-72 h-72 p-8 hover:bg-slate-700 transition flex flex-col gap-2 justify-between">
-        <div className="flex flex-col gap-2">
-          <h1 className="text-3xl">
-            {name}
-          </h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
-        </div>
-        <div className="flex flex-row flex-wrap gap-2">
-          {tagItems}
-        </div>
-      </a>
-    </div>
+    <a href={link} target="_blank" className="bg-slate-800 rounded-3xl w-72 h-72 p-8 hover:bg-slate-700 transition flex flex-col gap-2 justify-between">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-3xl">
+          {name}
+        </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+      </div>
+      <div className="flex flex-row flex-wrap gap-2">
+        {tagItems}
+      </div>
+    </a>
   )
 }
