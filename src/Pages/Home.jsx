@@ -1,51 +1,70 @@
 import React from "react";
-import * as THREE from "three";
 import * as drei from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-
 import {
   Environment,
-  MeshDistortMaterial,
   PerspectiveCamera,
 } from "@react-three/drei";
-import { useRef } from "react";
 import { Vector3 } from "three";
+import FacebookIcon from "../assets/facebook_icon.svg";
+import RemindIcon from "../assets/remind_icon.svg";
 
 function Home() {
   return (
-    <div className="flex flex-col items-center">
-      <div className="h-screen w-full aspect-square">
+    <body className="flex flex-col">
+      <header className="h-screen w-full aspect-square">
         <Canvas>
           <Environment preset={"city"}></Environment>
-          <HomeScene rotation={[0, Math.PI, 0]}></HomeScene>
+          <HomeHeaderScene rotation={[0, Math.PI, 0]}></HomeHeaderScene>
           <fog attach="fog" args={["#475569", 5, 40]} />
         </Canvas>
-      </div>
-      <div className="z-10 w-full">
-        <h1 className="text-7xl my-40 ">Education</h1>
-        <p className="py-10 w-96">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla
-          ut morbi tincidunt augue interdum velit euismod in. Lorem ipsum dolor
-        </p>
-        <h1 className="text-7xl my-40 ">Service</h1>
-        <p className="py-10 w-96">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla
-          ut morbi tincidunt augue interdum velit euismod in. Lorem ipsum dolor
-        </p>
-        <h1 className="text-7xl my-40 ">Community</h1>
-        <p className="py-10 w-96">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla
-          ut morbi tincidunt augue interdum velit euismod in. Lorem ipsum dolor
-        </p>
-      </div>
-    </div>
+      </header>
+
+      <section id="pillars" className="mb-40">
+        <div className="h-96">
+          Scholarship
+        </div>
+        <div style={{clipPath: 'polygon(0 19%, 100% 0, 100% 100%, 0 60%)'}} className="bg-blue-500 h-screen">
+          Service
+        </div>
+        <div className="h-96">
+          Leadership
+        </div>
+        <div style={{clipPath: 'polygon(0 11%, 100% 0, 100% 60%, 0 100%)'}} className="bg-blue-500 h-screen">
+          Character
+        </div>
+      </section>
+
+      <section id="about">
+        <div className="h-80">
+
+        </div>
+      </section>
+
+      <footer className="p-6">
+        <div className="flex items-center mb-2">
+          <div className="mr-8">
+            <a href="#">Join Our Club</a>
+          </div>
+          <a href="https://www.facebook.com/groups/chscsnhs" className="flex items-center mr-8">
+            <img src={FacebookIcon} alt="Facebook" className="w-7 mr-2" />
+            <span>Clements CSNHS</span>
+          </a>
+          <a href="https://www.remind.com/join/chscsnhs" className="flex items-center">
+            <img src={RemindIcon} alt="Remind" className="w-9 mr-1" />
+            <span>@chscsnhs</span>
+          </a>
+        </div>
+        <div className="border-b border-white"></div>
+        <div className="mt-2">
+          Copyright &copy;2022 Clements Computer Science National Honor Society. All rights reserved.
+        </div>
+      </footer>
+    </body>
   );
 }
 
-function HomeScene({ position, ...other }) {
+function HomeHeaderScene({ position, ...other }) {
   useFrame((state) => {
     state.camera.position.lerp(
       new Vector3(state.mouse.x / 3, state.mouse.y / 2, 9),
