@@ -75,7 +75,7 @@ function Home() {
               <Environment preset={"dawn"}></Environment>
               <drei.Float speed={4} rotationIntensity={0.5}>
                 <DisplayObject
-                  position = {[-4, 1.5, 0]}
+                  position = {[-4.5, 1.5, 0]}
                   rotation={[0, Math.PI / 2 + 0.7, Math.PI / 2]}
                   geometry={nodes.Heart.geometry}
                   scale={1.4}
@@ -84,7 +84,7 @@ function Home() {
             </drei.PresentationControls>
 
             <drei.Text
-                position={[2.5, 0.5, 0]}
+                position={[3, 0.5, 0]}
                 rotation={[0, -Math.PI/18, 0]}
                 font={"./Poppins-Light.ttf"}
                 fontSize={1.3}
@@ -92,12 +92,12 @@ function Home() {
                 Community
               </drei.Text>
               <drei.Text
-                position={[2.5, -0.5, 0]}
+                position={[2.5, -0.7, 0]}
                 rotation={[0, -Math.PI/18, 0]}
                 font={"./Poppins-Light.ttf"}
                 fontSize={0.6}
               >
-                Volunteer Opportunities
+                Bringing CS to More People
               </drei.Text>
           </Canvas>
         </div>
@@ -126,13 +126,30 @@ function Home() {
                 ></Environment>
                 <drei.Float speed={4} rotationIntensity={0.5}>
                   <DisplayObject
-                    rotation={[0, Math.PI / 2 - 0.6, Math.PI / 2]}
+                    rotation={[0, -(Math.PI / 2 - 0.6), Math.PI / 2]}
                     scale={0.9}
                     geometry={nodes.Gear.geometry}
-                    position={[0, 1, 0]}
+                    position={[-3, 0, 0]}
                   ></DisplayObject>
                 </drei.Float>
               </drei.PresentationControls>
+
+              <drei.Text
+                position={[2.5, 1.5, 0]}
+                rotation={[0, -Math.PI/12, 0]}
+                font={"./Poppins-Light.ttf"}
+                fontSize={1}
+              >
+                Service
+              </drei.Text>
+              <drei.Text
+                position={[2.5, 0.5, 0]}
+                rotation={[0, -Math.PI/12, 0]}
+                font={"./Poppins-Light.ttf"}
+                fontSize={0.5}
+              >
+                Volunteer Opportunities
+              </drei.Text>
             </Canvas>
           </div>
         </div>
