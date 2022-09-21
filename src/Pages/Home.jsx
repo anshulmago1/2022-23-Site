@@ -5,8 +5,8 @@ import { Environment, PerspectiveCamera } from "@react-three/drei";
 import { Vector3 } from "three";
 
 function Home() {
-  const [pillar2Hover, setPillar2Hover] = useState(false);
-  const [pillar4Hover, setPillar4Hover] = useState(false);
+  const [pillar1Hover, setPillar1Hover] = useState(false);
+  const [pillar3Hover, setPillar3Hover] = useState(false);
   const { nodes, materials } = drei.useGLTF("./CSNHS_icons.glb");
 
   return (
@@ -20,11 +20,9 @@ function Home() {
       </header>
 
       <section id="pillars" className="mb-40">
-        <div className="h-96"></div>
-
         <div
           style={{
-            filter: pillar2Hover && "drop-shadow(-5px 10px 4px #7DD3FC)",
+            filter: pillar1Hover && "drop-shadow(0px 10px 4px #7380C3)",
           }}
           className="transition-all duration-500"
         >
@@ -32,23 +30,41 @@ function Home() {
             style={{
               clipPath: "polygon(0 19%, 100% 0, 100% 100%, 0 60%)",
             }}
-            className={`bg-blue-600 h-[60rem] ${
-              pillar2Hover && "hover:-translate-y-4 hover:translate-x-2"
+            className={`bg-indigo-700 h-[60rem] ${
+              pillar1Hover && "hover:-translate-y-4"
             } transition-all duration-500 flex`}
-            onMouseOver={() => setPillar2Hover(true)}
-            onMouseLeave={() => setPillar2Hover(false)}
+            onMouseOver={() => setPillar1Hover(true)}
+            onMouseLeave={() => setPillar1Hover(false)}
           >
             <Canvas>
               <Environment preset={"dawn"}></Environment>
               <drei.PresentationControls snap={{ mass: 4, tension: 1500 }}>
                 <drei.Float speed={4} rotationIntensity={0.5}>
                   <DisplayObject
+                    position={[3, 0, 0]}
                     rotation={[0, Math.PI / 2 - 0.7, Math.PI / 2]}
                     geometry={nodes.Code.geometry}
                     scale={0.8}
                   ></DisplayObject>
                 </drei.Float>
               </drei.PresentationControls>
+
+              <drei.Text
+                position={[-2.5, 1, 0]}
+                rotation={[0, Math.PI/18, 0]}
+                font={"./Poppins-Light.ttf"}
+                fontSize={1}
+              >
+                Education
+              </drei.Text>
+              <drei.Text
+                position={[-2.5, 0, 0]}
+                rotation={[0, Math.PI/18, 0]}
+                font={"./Poppins-Light.ttf"}
+                fontSize={0.5}
+              >
+                CS Team Projects
+              </drei.Text>
             </Canvas>
           </div>
         </div>
@@ -59,18 +75,36 @@ function Home() {
               <Environment preset={"dawn"}></Environment>
               <drei.Float speed={4} rotationIntensity={0.5}>
                 <DisplayObject
+                  position = {[-4, 1.5, 0]}
                   rotation={[0, Math.PI / 2 + 0.7, Math.PI / 2]}
                   geometry={nodes.Heart.geometry}
                   scale={1.4}
                 ></DisplayObject>
               </drei.Float>
             </drei.PresentationControls>
+
+            <drei.Text
+                position={[2.5, 0.5, 0]}
+                rotation={[0, -Math.PI/18, 0]}
+                font={"./Poppins-Light.ttf"}
+                fontSize={1.3}
+              >
+                Community
+              </drei.Text>
+              <drei.Text
+                position={[2.5, -0.5, 0]}
+                rotation={[0, -Math.PI/18, 0]}
+                font={"./Poppins-Light.ttf"}
+                fontSize={0.6}
+              >
+                Volunteer Opportunities
+              </drei.Text>
           </Canvas>
         </div>
 
         <div
           style={{
-            filter: pillar4Hover && "drop-shadow(5px 10px 4px #7DD3FC)",
+            filter: pillar3Hover && "drop-shadow(0px 10px 4px #7380C3)",
           }}
           className="transition-all duration-500"
         >
@@ -78,11 +112,11 @@ function Home() {
             style={{
               clipPath: "polygon(0 11%, 100% 0, 100% 60%, 0 100%)",
             }}
-            className={`bg-blue-600 h-[60rem] ${
-              pillar4Hover && "hover:-translate-y-4 hover:-translate-x-2"
+            className={`bg-indigo-700 h-[60rem] ${
+              pillar3Hover && "hover:-translate-y-4"
             } transition-all duration-500`}
-            onMouseOver={() => setPillar4Hover(true)}
-            onMouseLeave={() => setPillar4Hover(false)}
+            onMouseOver={() => setPillar3Hover(true)}
+            onMouseLeave={() => setPillar3Hover(false)}
           >
             <Canvas>
               <drei.PresentationControls snap={{ mass: 4, tension: 1500 }}>
@@ -102,10 +136,6 @@ function Home() {
             </Canvas>
           </div>
         </div>
-      </section>
-
-      <section id="about">
-        <div className="h-80"></div>
       </section>
     </div>
   );
