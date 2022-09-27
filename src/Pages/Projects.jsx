@@ -2,8 +2,8 @@ import React from "react";
 
 function Projects() {
   return (
-    <div className="flex flex-col items-center py-48 px-6 gap-6">
-      <div className="grid md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-6 md:gap-8">
+    <div className="flex flex-col items-center py-48 gap-6">
+      <div className="max-w-screen-2xl px-6 grid md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-6 md:gap-8">
         <Project name="Memscript" tags={['React', 'JavaScript']} link="https://memscript.netlify.app/" ></Project>
         <Project name="Relayter" tags={['JavaScript', 'CSS']}></Project>
         <Project name="Memscript" tags={['React', 'JavaScript']} link="https://memscript.netlify.app/" ></Project>
@@ -25,7 +25,7 @@ function Project({ name, link, tags }) {
   );
 
   return (
-    <a href={link} target="_blank" className="bg-slate-800 rounded-3xl w-72 h-72 p-8 hover:bg-slate-700 transition flex flex-col gap-2 justify-between">
+    <a href={link} target="_blank" className="bg-slate-800 rounded-3xl p-8 h-72 hover:bg-slate-700 transition flex flex-col gap-2 justify-between">
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl">
           {name}
