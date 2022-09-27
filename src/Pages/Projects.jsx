@@ -2,8 +2,7 @@ import React from "react";
 
 function Projects() {
   return (
-    <div className="flex flex-col items-center py-48 px-8 gap-6">
-      <h1 className="text-7xl">Projects</h1>
+    <div className="flex flex-col items-center py-48 px-6 gap-6">
       <div className="grid md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-6 md:gap-8">
         <Project name="Memscript" tags={['React', 'JavaScript']} link="https://memscript.netlify.app/" ></Project>
         <Project name="Relayter" tags={['JavaScript', 'CSS']}></Project>
