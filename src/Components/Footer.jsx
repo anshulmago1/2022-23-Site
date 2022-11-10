@@ -3,8 +3,8 @@ import RemindIcon from "../assets/remind_icon.svg";
 
 function Footer() {
   return (
-    <footer className="text-slate-500 transition-all stroke-slate-500 p-6 text-sm flex flex-col gap-2">
-      <div className=" flex sm:flex-row flex-col sm:gap-4 gap-2">
+    <footer className="relative bottom-0 text-slate-500 transition-all stroke-slate-500 p-6 text-sm flex items-center  gap-2 ">
+      <div className="flex sm:flex-row flex-col sm:gap-4 gap-2 max-w-screen-2xl expand">
         <a href="#" className="flex items-center " target="_blank">
           <span>Join Our Club</span>
         </a>
@@ -30,11 +30,10 @@ function Footer() {
 
           <span>Clements CSNHS</span>
         </a>
-      </div>
-      <div className="border-b border-slate-500"></div>
-      <div className="">
-        Copyright &copy;2022 Clements Computer Science National Honor Society.
-        All rights reserved.
+        <p>
+          Copyright &copy;2022 Clements Computer Science National Honor Society.
+          All rights reserved.
+        </p>
       </div>
     </footer>
   );

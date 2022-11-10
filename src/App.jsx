@@ -8,7 +8,7 @@ import Forms from "./Pages/Forms";
 
 function App() {
   return (
-    <div className="w-full min-h-screen text-slate-50 bg-slate-900 z-40">
+    <div className="flex flex-col w-full min-h-screen text-slate-50 bg-slate-900 z-40">
       <Router>
         <Navbar />
         <Routes>

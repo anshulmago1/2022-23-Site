@@ -1,35 +1,29 @@
 import React from "react";
 import Button from "../Components/Button";
+import Horizontal from "../Components/Horizontal";
+import Page from "../Components/Page";
 
 export default function Forms() {
   return (
-    <div className="flex flex-col items-center">
-      <div className="z-10 max-w-screen-2xl py-48 px-6">
-        <div className="w-full max-h-screen flex flex-col md:gap-10 gap-4">
-          <h1 className="lg:text-7xl md:text-6xl sm:text-5xl text-4xl">
-            Forms
-          </h1>
-          <p className="lg:text-2xl md:text-xl sm:text-lg">
-            Computer Science National Honor Society is a club focused on
-            teaching a variety of topics in computer science, along with helping
-            the community with tech-related events and projects. We strive to
-            provide students with a chance to learn valuable skills and to help
-            others.
-          </p>
-          <h1 className="lg:text-7xl md:text-6xl sm:text-5xl text-4xl">
-            Why should I join?
-          </h1>
-          <p className="lg:text-2xl md:text-xl sm:text-lg">
-            If you are interested in software development, game design, or
-            pretty much any field of computer science, our club is a great way
-            to find ways to learn and apply these skills in the real world
-            through our volunteering opportunities. The concepts and topics we
-            teach are valuable tools if you plan on becoming a software
-            developer or just want to build games and projects of your own.
-          </p>
-          <Button>Sign Up</Button>
-        </div>
-      </div>
-    </div>
+    <Page>
+      <h1 className="lg:text-xl md:text-base sm:text-sm text-sm">Forms</h1>
+      <Horizontal></Horizontal>
+      <h1 className="lg:text-7xl md:text-6xl sm:text-5xl text-4xl">Teaching</h1>
+      <p className="lg:text-xl md:text-base sm:text-sm leading-loose">
+        Anyone willing to share their experience in an area of Computer Science
+        can sign up to teach lessons! These lessons will count as service hours,
+        and must be taught in an{" "}
+        <a
+          target="_blank"
+          href="https://docs.google.com/spreadsheets/d/1YjQITcpr_Hzhfqt9G0ayVSU9JxG0gm2MTDS2RlrU0yo/edit?usp=sharing"
+          className="underline text-blue-500 hover:text-blue-400 transition-all"
+        >
+          available time slot.
+        </a>
+      </p>
+      <a target="_blank" href="https://forms.gle/EgDBaALGt618oeue9">
+        <Button>Sign Up to Teach</Button>
+      </a>
+    </Page>
   );
 }

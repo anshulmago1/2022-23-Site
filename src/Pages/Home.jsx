@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, Suspense } from "react";
 import * as drei from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, PerspectiveCamera } from "@react-three/drei";
@@ -9,14 +9,15 @@ function Home() {
 
   return (
     <div className="flex flex-col">
-      <header className="h-screen w-full aspect-square">
-        <Canvas>
-          <Environment preset={"dawn"}></Environment>
-          <HomeHeaderScene rotation={[0, Math.PI, 0]}></HomeHeaderScene>
-          <fog attach="fog" args={["#475569", 5, 40]} />
-        </Canvas>
+      <header className="h-[94vh] w-full aspect-square">
+        <Suspense>
+          <Canvas>
+            <Environment preset={"dawn"}></Environment>
+            <HomeHeaderScene rotation={[0, Math.PI, 0]}></HomeHeaderScene>
+            <fog attach="fog" args={["#475569", 5, 40]} />
+          </Canvas>
+        </Suspense>
       </header>
-      <div className="h-80"></div>
     </div>
   );
 }
