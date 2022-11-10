@@ -24,6 +24,17 @@ export default function Forms() {
       <a target="_blank" href="https://forms.gle/EgDBaALGt618oeue9">
         <Button>Sign Up to Teach</Button>
       </a>
+      <h1 className="lg:text-7xl md:text-6xl sm:text-5xl text-4xl">
+        Service Hours
+      </h1>
+      <p className="lg:text-xl md:text-base sm:text-sm leading-loose">
+        When submitting service hours, make sure your forms are scanned clearly.
+        As of now, we prefer YES forms, but any type of documentation with name,
+        description, date of service, and adult signature will also be accepted.
+      </p>
+      <a target="_blank" href="https://forms.gle/NpdXKo5cHSdL2C6y5">
+        <Button>Submit Your Hours</Button>
+      </a>
     </Page>
   );
 }

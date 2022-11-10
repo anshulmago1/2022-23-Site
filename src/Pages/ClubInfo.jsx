@@ -30,7 +30,9 @@ function ClubInfo() {
         valuable tools if you plan on becoming a software developer or just want
         to build games and projects of your own.
       </p>
-      <Button>Sign Up</Button>
+      <a target="_blank" href="https://forms.gle/VoA1pXD9LJwhRDBe7">
+        <Button>Sign Up</Button>
+      </a>
     </Page>
   );
 }

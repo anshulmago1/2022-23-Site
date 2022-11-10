@@ -9,7 +9,7 @@ function Home() {
 
   return (
     <div className="flex flex-col">
-      <header className="h-[94vh] w-full aspect-square">
+      <header className="h-screen w-full aspect-square">
         <Suspense>
           <Canvas>
             <Environment preset={"dawn"}></Environment>

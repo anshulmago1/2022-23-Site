@@ -3,8 +3,8 @@ import RemindIcon from "../assets/remind_icon.svg";
 
 function Footer() {
   return (
-    <footer className="relative bottom-0 text-slate-500 transition-all stroke-slate-500 p-6 text-sm flex items-center  gap-2 ">
-      <div className="flex sm:flex-row flex-col sm:gap-4 gap-2 max-w-screen-2xl expand">
+    <footer className="text-slate-500 transition-all w-screen stroke-slate-500 text-sm flex items-center">
+      <div className="flex sm:flex-row flex-col lg:mx-24 md:mx-16 sm:mx-10 mx-10 sm:gap-4 mb-4 max-w-screen-2xl">
         <a href="#" className="flex items-center " target="_blank">
           <span>Join Our Club</span>
         </a>
