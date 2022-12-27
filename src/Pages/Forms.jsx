@@ -6,10 +6,8 @@ import Page from "../Components/Page";
 export default function Forms() {
   return (
     <Page>
-      <h1 className="lg:text-xl md:text-base sm:text-sm text-sm">Forms</h1>
-      <Horizontal></Horizontal>
-      <h1 className="lg:text-7xl md:text-6xl sm:text-5xl text-4xl">Teaching</h1>
-      <p className="lg:text-xl md:text-base sm:text-sm leading-loose">
+      <h1 className="md:text-6xl text-4xl font-bold">Teaching</h1>
+      <p className="md:text-xl md:leading-10 leading-loose">
         Anyone willing to share their experience in an area of Computer Science
         can sign up to teach lessons! These lessons will count as service hours,
         and must be taught in an{" "}
@@ -21,20 +19,24 @@ export default function Forms() {
           available time slot.
         </a>
       </p>
-      <a target="_blank" href="https://forms.gle/EgDBaALGt618oeue9">
-        <Button>Sign Up to Teach</Button>
-      </a>
-      <h1 className="lg:text-7xl md:text-6xl sm:text-5xl text-4xl">
+      <Button>
+        <a target="_blank" href="https://forms.gle/EgDBaALGt618oeue9">
+          Sign Up to Teach
+        </a>
+      </Button>
+      <h1 className="md:text-6xl text-4xl font-bold mt-10">
         Service Hours
       </h1>
-      <p className="lg:text-xl md:text-base sm:text-sm leading-loose">
+      <p className="md:text-xl md:leading-10 leading-loose">
         When submitting service hours, make sure your forms are scanned clearly.
         As of now, we prefer YES forms, but any type of documentation with name,
         description, date of service, and adult signature will also be accepted.
       </p>
-      <a target="_blank" href="https://forms.gle/NpdXKo5cHSdL2C6y5">
-        <Button>Submit Your Hours</Button>
-      </a>
+      <Button>
+        <a target="_blank" href="https://forms.gle/NpdXKo5cHSdL2C6y5">
+          Submit Your Hours
+        </a>
+      </Button>
     </Page>
   );
 }
