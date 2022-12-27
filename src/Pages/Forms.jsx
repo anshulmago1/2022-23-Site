@@ -6,8 +6,8 @@ import Page from "../Components/Page";
 export default function Forms() {
   return (
     <Page>
-      <h1 className="md:text-6xl text-4xl font-bold">Teaching</h1>
-      <p className="md:text-xl md:leading-10 leading-loose">
+      <h1 className="md:text-7xl text-5xl font-bold">Teaching</h1>
+      <p className="md:text-xl md:leading-8 leading-loose">
         Anyone willing to share their experience in an area of Computer Science
         can sign up to teach lessons! These lessons will count as service hours,
         and must be taught in an{" "}
@@ -24,10 +24,10 @@ export default function Forms() {
           Sign Up to Teach
         </a>
       </Button>
-      <h1 className="md:text-6xl text-4xl font-bold mt-10">
+      <h1 className="md:text-7xl text-5xl font-bold mt-10">
         Service Hours
       </h1>
-      <p className="md:text-xl md:leading-10 leading-loose">
+      <p className="md:text-xl md:leading-8 leading-loose">
         When submitting service hours, make sure your forms are scanned clearly.
         As of now, we prefer YES forms, but any type of documentation with name,
         description, date of service, and adult signature will also be accepted.

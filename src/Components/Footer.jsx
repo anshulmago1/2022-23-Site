@@ -1,8 +1,8 @@
 function Footer() {
   return (
-    <footer className="text-slate-500 stroke-slate-500 text-sm flex absolute bottom-5">
-      <div className="flex md:flex-row flex-col md:gap-4 gap-2">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd653LDz2Ot0di4BVwhlAkEFEmV6sNnBbYQiCbVLNqr4LE4wA/viewform" className="flex items-center hover:text-slate-400 transition-all" target="_blank">
+    <footer className="text-slate-500 stroke-slate-500 text-sm flex absolute bottom-5 mr-10">
+      <div className="flex md:flex-row flex-col md:gap-4 gap-2 max-w-screen-2xl">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd653LDz2Ot0di4BVwhlAkEFEmV6sNnBbYQiCbVLNqr4LE4wA/viewform" className="hover:text-slate-400 transition-all" target="_blank">
           <span>Join Our Club</span>
         </a>
         <a
