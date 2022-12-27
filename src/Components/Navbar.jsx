@@ -14,12 +14,6 @@ function Navbar() {
 
         <ul className="flex sm:gap-6 gap-4">
           <li>
-            <Link to="/" className="hover:text-slate-400 transition-all ">
-              Home
-            </Link>
-          </li>
-
-          <li>
             <Link
               to="/club_info"
               className="hover:text-slate-400 transition-all "
