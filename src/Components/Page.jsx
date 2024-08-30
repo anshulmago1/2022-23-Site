@@ -1,17 +1,24 @@
-import React from "react";
-import Footer from "./Footer";
+import React from 'react';
 
-export default function Page({ children }) {
+function Page({ children, title, showHeader = false }) {
   return (
-    <>
-      <div className="flex flex-col items-center relative min-h-screen">
-        <div className="z-10 max-w-screen-2xl flex flex-col grow justify-between pt-28 pb-40 mx-10">
-          <div className="w-full flex flex-col grow justify-center md:gap-8 gap-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+      {showHeader && (
+        <header className="py-24 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-6xl font-bold mb-4">{title}</h1>
+          </div>
+        </header>
+      )}
+      <div className="py-6 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="p-6 sm:p-8 text-gray-800">
             {children}
           </div>
-          <Footer></Footer>
         </div>
       </div>
-    </>
+    </div>
   );
 }
+
+export default Page;

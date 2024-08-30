@@ -1,99 +1,60 @@
-import { React, Suspense } from "react";
-import * as drei from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, PerspectiveCamera } from "@react-three/drei";
-import { Vector3 } from "three";
+import React from "react";
+import Button from "../Components/Button";
 
 function Home() {
-  const { nodes, materials } = drei.useGLTF("./CSNHS_icons.glb");
-
   return (
-    <div className="flex flex-col">
-      <header className="h-screen w-full aspect-square">
-        <Suspense>
-          <Canvas>
-            <Environment preset={"dawn"}></Environment>
-            <HomeHeaderScene rotation={[0, Math.PI, 0]}></HomeHeaderScene>
-            <fog attach="fog" args={["#475569", 5, 40]} />
-          </Canvas>
-        </Suspense>
+    <div className="min-h-screen bg-white text-gray-800">
+      <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white h-[85vh] flex flex-col justify-center items-center relative overflow-hidden">
+        <div className="text-center z-10">
+          <h1 className="text-6xl font-bold mb-4">
+            Clements <span className="text-blue-200">CSNHS</span>
+          </h1>
+          <p className="text-2xl text-blue-100 mb-8">Computer Science National Honor Society</p>
+          <Button href="#get-involved">Get Involved</Button>
+        </div>
       </header>
+
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+          <FeatureCard 
+            icon="👥"
+            title="Community"
+            description="Join a vibrant community of passionate CS enthusiasts."
+          />
+          <FeatureCard 
+            icon="💻"
+            title="Coding"
+            description="Enhance your coding skills through projects and workshops."
+          />
+          <FeatureCard 
+            icon="🎓"
+            title="Growth"
+            description="Prepare for your future in computer science and technology."
+          />
+        </div>
+      </section>
+
+      <section className="bg-gray-100 py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8 text-blue-900">Join Our Community</h2>
+          <p className="text-xl mb-12 text-gray-700">
+            Be part of a supportive network of students passionate about computer science. 
+            Learn, grow, and make lasting connections.
+          </p>
+          <Button>Get Involved</Button>
+        </div>
+      </section>
     </div>
   );
 }
 
-function HomeHeaderScene({ position, ...other }) {
-  useFrame((state) => {
-    state.camera.position.lerp(
-      new Vector3(state.mouse.x, state.mouse.y, 10),
-      0.05
-    );
-  });
+function FeatureCard({ icon, title, description }) {
   return (
-    <group other rotation={[0.1, -Math.PI / 2, 0]}>
-      <PerspectiveCamera makeDefault position={[0, 4, 4]}></PerspectiveCamera>
-      <group position={[2, 0, 0]}>
-        <group rotation={[-0.4, 0, 0]}>
-          <drei.Float speed={8} rotationIntensity={0.5}>
-            <drei.Icosahedron
-              args={[1.7, 0]}
-              position={[1.2, 0.5, 0]}
-              rotation={[0.2, 0.2, 0.1]}
-            >
-              <meshPhysicalMaterial
-                metalness={1}
-                roughness={0.2}
-                clearcoat={0.4}
-              ></meshPhysicalMaterial>
-            </drei.Icosahedron>
-          </drei.Float>
-        </group>
-        <gridHelper
-          args={[100, 60]}
-          position={[10, -1.5, 0]}
-          rotation={[0, Math.PI / 6, 0]}
-        ></gridHelper>
-      </group>
-      <drei.Text3D
-        font={"./rubik_mono_one.json"}
-        position={[-5, 0.6, 0]}
-        size={0.6}
-        lineHeight={1}
-        rotation={[0, Math.PI / 8, 0]}
-      >
-        Clements {"\n"}
-        CSNHS
-        <meshPhysicalMaterial
-          clearcoat={0}
-          metalness={1}
-          roughness={0.1}
-        ></meshPhysicalMaterial>
-      </drei.Text3D>
-    </group>
-  );
-}
-
-function DisplayObject({ position, rotation, geometry, scale }) {
-  useFrame((state) => {
-    state.camera.position.lerp(
-      new Vector3(state.mouse.x, state.mouse.y, 6),
-      0.05
-    );
-  });
-
-  return (
-    <mesh
-      geometry={geometry}
-      position={position}
-      rotation={rotation}
-      scale={scale}
-    >
-      <meshPhysicalMaterial
-        metalness={1}
-        roughness={0.2}
-        clearcoat={0.4}
-      ></meshPhysicalMaterial>
-    </mesh>
+    <div className="bg-gray-100 p-8 rounded-lg text-center hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+      <div className="text-5xl mb-4">{icon}</div>
+      <h3 className="text-2xl font-semibold mb-4 text-blue-900">{title}</h3>
+      <p className="text-gray-700">{description}</p>
+    </div>
   );
 }
 
