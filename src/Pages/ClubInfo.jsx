@@ -1,69 +1,82 @@
 import React from "react";
 import Page from "../Components/Page";
-import Button from "../Components/Button";
 
 function ClubInfo() {
   return (
     <Page>
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-6xl font-bold text-center text-gray-900 mb-12">
+      <div className="max-w-6xl mx-auto px-4 py-10 bg-gradient-to-b from-blue-50 to-white">
+        <h1 className="text-5xl md:text-6xl font-extrabold text-center text-gray-800 mb-12">
           About CSNHS
         </h1>
         
+
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6">What is CSNHS?</h2>
-          <p className="text-lg text-gray-600 leading-relaxed mb-6">
-            The Computer Science National Honor Society (CSNHS) is a prestigious organization dedicated to promoting excellence and fostering passion in the field of computer science. Our club focuses on:
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2 inline-block">What is CSNHS?</h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6 shadow-lg p-5 bg-white rounded-lg">
+            The Computer Science National Honor Society (CSNHS) is an organization that recognizes students who display qualities of scholarship, leadership, character, and generosity in relation to computer science. CSNHS strives to promote learning and understanding of computer science, service to the community, and leadership for other students.
           </p>
-          <ul className="list-disc list-inside text-lg text-gray-600 leading-relaxed mb-6 space-y-2">
-            <li>Teaching a variety of cutting-edge computer science topics</li>
-            <li>Engaging in community service through tech-related events and projects</li>
-            <li>Providing students with opportunities to develop valuable skills</li>
-            <li>Creating a supportive network of like-minded CS enthusiasts</li>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-purple-500 pb-2 inline-block">What We Do</h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            Our members help throughout the community through various activities and events. Students participate in many activities such as:
+          </p>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              "Host events and run contests",
+              "Tutor students",
+              "Provide technology-related assistance in the community",
+              "Host various lessons and talks on computer science topics"
+            ].map((activity, index) => (
+              <li key={index} className="flex items-center bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <span className="text-purple-500 mr-2 text-xl">•</span>
+                <span className="text-base text-gray-800">{activity}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+        
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-green-500 pb-2 inline-block">Points System</h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            CSNHS uses a points system to encourage active participation. Members must earn at least 12 points per semester to remain active. Points can be earned through various activities:
+          </p>
+          <ul className="space-y-3">
+            {[
+              "Paying dues (5 points)",
+              "Volunteer hours related to computer science (1 point per hour)",
+              "Participating in the CSNHS hackathon (3 points)",
+              "Teaching a lesson (5 points)"
+            ].map((item, index) => (
+              <li key={index} className="flex items-center bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <span className="text-green-500 mr-2 text-xl">•</span>
+                <span className="text-base text-gray-800">{item}</span>
+              </li>
+            ))}
           </ul>
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6">Why Join CSNHS?</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Skill Development</h3>
-              <p className="text-gray-600">
-                Enhance your coding abilities through hands-on projects, workshops, and collaborative learning experiences.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Networking</h3>
-              <p className="text-gray-600">
-                Connect with peers, mentors, and industry professionals who share your passion for computer science.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Leadership Opportunities</h3>
-              <p className="text-gray-600">
-                Take on leadership roles within the club and develop essential soft skills for your future career.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">College Preparation</h3>
-              <p className="text-gray-600">
-                Strengthen your college applications and prepare for a successful future in computer science and technology.
-              </p>
-            </div>
-          </div>
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-red-500 pb-2 inline-block">Requirements</h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          Anyone can join CSNHS or the Web Dev team. However, in order to graduate with a CSNHS cord you must:
+          </p>
+          <ul className="space-y-3">
+            {[
+              "Earn at least 12 points per semester (see Points System above)",
+              "Pay dues",
+              "Have 2 computer science credits completed with an A or above",
+              "Have no more than 1 unexcused meeting for the year"
+            ].map((requirement, index) => (
+              <li key={index} className="flex items-center bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <span className="text-red-500 mr-2 text-xl">•</span>
+                <span className="text-base text-gray-800">{requirement}</span>
+              </li>
+            ))}
+          </ul>
         </section>
 
-        <section>
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6">Join Us Today!</h2>
-          <p className="text-lg text-gray-600 leading-relaxed mb-8">
-            Whether you're a seasoned coder or just starting your journey in computer science, CSNHS welcomes all passionate and dedicated students. Join us to expand your knowledge, make lasting connections, and contribute to the exciting world of technology!
-          </p>
-          <div className="text-center">
-            <Button href="https://forms.gle/VoA1pXD9LJwhRDBe7">
-              Apply Now
-            </Button>
-          </div>
-        </section>
       </div>
     </Page>
   );

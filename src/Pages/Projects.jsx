@@ -27,7 +27,7 @@ function Project({ name, link, tags }) {
   return (
     <a href={link} target="_blank" className="bg-slate-800 rounded-3xl p-8 h-72 hover:bg-slate-700 transition flex flex-col gap-2 justify-between">
       <div className="flex flex-col gap-2">
-        <h1 className="text-3xl">
+        <h1 className="text-3xl text-blue-900">
           {name}
         </h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>

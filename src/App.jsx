@@ -4,7 +4,6 @@ import Home from "./Pages/Home";
 import ClubInfo from "./Pages/ClubInfo";
 import Forms from "./Pages/Forms";
 import Calendar from "./Pages/Calendar";
-import Resources from "./Pages/Resources";
 import CommunityProjects from "./Pages/CommunityProjects";
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
             <Route path="/club_info" element={<ClubInfo />} />
             <Route path="/forms" element={<Forms />} />
             <Route path="/calendar" element={<Calendar />} />
-            <Route path="/resources" element={<Resources />} />
             <Route path="/projects" element={<CommunityProjects />} />
           </Routes>
         </div>
