@@ -6,7 +6,7 @@ export default function Forms() {
   return (
     <Page>
       <div className="max-w-6xl mx-auto px-4 py-8 bg-gradient-to-b from-blue-50 to-white">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-gray-800 mb-10">
+        <h1 className="text-5xl md:text-6xl font-extrabold text-center text-gray-800 mb-10">
           CSNHS Forms
         </h1>
 
