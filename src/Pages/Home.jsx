@@ -3,6 +3,14 @@ import Button from "../Components/Button";
 import ParticleBackground from '../Components/ParticleBackground';
 
 function Home() {
+  const scrollToGetInvolved = (e) => {
+    e.preventDefault();
+    const getInvolvedSection = document.getElementById('get-involved');
+    if (getInvolvedSection) {
+      getInvolvedSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white text-gray-800">
       <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white h-[85vh] flex flex-col justify-center items-center relative overflow-hidden">
@@ -12,7 +20,7 @@ function Home() {
             Clements <span className="text-blue-200">CSNHS</span>
           </h1>
           <p className="text-2xl text-blue-100 mb-8">Computer Science National Honor Society</p>
-          <Button href="#get-involved">Get Involved</Button>
+          <Button href="#get-involved" onClick={scrollToGetInvolved}>Get Involved</Button>
         </div>
       </header>
 
@@ -39,13 +47,13 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-100 py-20 px-4">
+      <section id="get-involved" className="bg-gray-100 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8 text-gray-800 border-b-4 border-indigo-500 pb-2 inline-block">Join Clements CSNHS</h2>
           <p className="text-xl mb-12 text-gray-700 leading-relaxed max-w-2xl mx-auto">
             To be a member of Clements CSNHS, please sign up below. We look forward to having you join our community!
           </p>
-          <Button>Get Involved</Button>
+          <Button href="https://forms.gle/kKTFyBWu25kgd6mS7" target="_blank">Interest Form</Button>
         </div>
       </section>
     </div>

@@ -68,7 +68,7 @@ function ProjectCard({ title, description, skills, signupLink }) {
 }
 
 function CommunityProjects() {
-  const projectProposalFormUrl = "https://forms.gle/exampleProjectProposalForm";
+  const projectProposalFormUrl = "https://forms.gle/8KL54YKfW5DQexHG8";
 
   return (
     <Page>
