@@ -53,7 +53,8 @@ function Home() {
           <p className="text-xl mb-12 text-gray-700 leading-relaxed max-w-2xl mx-auto">
             To be a member of Clements CSNHS, please sign up below. We look forward to having you join our community!
           </p>
-          <Button href="https://forms.gle/kKTFyBWu25kgd6mS7" target="_blank">Interest Form</Button>
+          <Button href="https://docs.google.com/forms/d/e/1FAIpQLScfCz1WT5YYTDBJyJofDqEWts10WSN2rZdirE6OblWfshzbPQ/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link&urp=gmail_link
+" target="_blank">Membership Form</Button>
         </div>
       </section>
     </div>
