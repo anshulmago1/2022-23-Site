@@ -15,9 +15,16 @@ const skillColors = {
   "API Integration": "bg-lime-100 text-lime-800",
   "Tailwind CSS": "bg-pink-100 text-pink-800",
   "Next.js": "bg-red-100 text-red-800",
+  "Backend Development": "bg-pink-100 text-pink-800",
 };
 
 const projects = [
+  {
+    title: "DECA!",
+    description: "Create a website for DECA, includes login system, attendance tracking",
+    skills: ["Web Development", "React", "UI/UX Design", "Backend Development"],
+    signupLink: "https://forms.gle/nyzhs2dC4zGnxnEE7",
+  },
   {
     title: "MSA Website",
     description: "Create a website for the Muslim Student Association to help them reach more students and share information about their events.",

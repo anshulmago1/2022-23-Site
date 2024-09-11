@@ -45,8 +45,9 @@ function ClubInfo() {
           <ul className="space-y-3">
             {[
               "Paying dues (5 points)",
-              "Volunteer hours related to computer science (1 point per hour)",
-              "Participating in the CSNHS hackathon (3 points)",
+              "Volunteer hours related to computer science (includes web development) (1 point per hour)",
+              "Participating in the any CSNHS event (2 points)",
+              "Attending a CSNHS meeting (1 point)",
               "Teaching a lesson (5 points)"
             ].map((item, index) => (
               <li key={index} className="flex items-center bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
