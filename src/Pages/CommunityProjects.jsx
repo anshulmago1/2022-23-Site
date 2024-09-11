@@ -20,7 +20,7 @@ const skillColors = {
 
 const projects = [
   {
-    title: "DECA!",
+    title: "DECA",
     description: "Create a website for DECA, includes login system, attendance tracking",
     skills: ["Web Development", "React", "UI/UX Design", "Backend Development"],
     signupLink: "https://forms.gle/nyzhs2dC4zGnxnEE7",
