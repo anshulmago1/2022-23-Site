@@ -32,12 +32,6 @@ const projects = [
     signupLink: "https://forms.gle/nyzhs2dC4zGnxnEE7",
   },
   {
-    title: "CSNHS Hackathon",
-    description: "Sign up to participate in CSNHS's hackathon this fall. Gift Cards for winners!",
-    skills: ["Mobile Development", "Web Development", "UI/UX Design"],
-    signupLink: "https://forms.gle/exampleTutoringAppSignupForm",
-  },
-  {
     title: "This Website!",
     description: "If you have any ideas to make this site better please let us know!",
     skills: ["Web Development", "Next.js", "UI/UX Design", "Tailwind CSS"],
