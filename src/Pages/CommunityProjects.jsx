@@ -20,6 +20,12 @@ const skillColors = {
 
 const projects = [
   {
+    title: "First Racquet",
+    description: "Create a an application for First Raqcuet on IOS, includes hour tracking, direct messaging, and more ",
+    skills: ["App Development", "XCode", "UI/UX Design", "Firebase"],
+    signupLink: "https://forms.gle/nyzhs2dC4zGnxnEE7",
+  },
+  {
     title: "DECA",
     description: "Create a website for DECA, includes login system, attendance tracking",
     skills: ["Web Development", "React", "UI/UX Design", "Backend Development"],
